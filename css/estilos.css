@@ -1,5 +1,14 @@
+:root{
+    --bg-surface: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 393px;
 }
 
 header{
@@ -8,4 +17,44 @@ header{
 
 a{
     color: brown;
+}
+
+.card{
+    border: 1px solid gray;
+    padding: 1rem;
+    background-color: var(--bg-surface);
+    margin-block-end: 1rem;
+}
+
+nav a[aria-current="page"]{
+    font-weight: bold;
+}
+
+nav a:not([aria-current="page"]){
+    color: gray;
+}
+
+nav a:not([aria-current="page"]):hover{
+    outline: 2px #4848b9 solid;
+}
+
+nav a:not([aria-current="page"]):focus-visible{
+    outline: 2px #323294 solid;
+}
+
+h2 + .card{
+    border: 2px solid rgb(152, 40, 40);
+}
+
+.badge:empty{
+    background-color: #4848b9;
+}
+
+article:has(.badge:not(:empty)){
+    background-color: #eaeaff;
+}
+
+button[aria-label]{
+    border: brown solid 2px;
+    border-radius: 1rem;
 }
